@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  tn-elastic:
+    image: thenotifier-elasticsearch:0.0.1-6.2.3
+    environment:
+      - cluster.name=foo
+      - discovery.type=single-node
+    ports:
+      - 9200:9200
